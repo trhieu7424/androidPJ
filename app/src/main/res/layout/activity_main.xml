@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".MainActivity">
+
+    <!-- Thanh tìm kiếm -->
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_normal"
+        android:background="@drawable/search_bar_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/padding_normal"
+        android:paddingVertical="@dimen/padding_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/icon_size_small"
+            android:layout_height="@dimen/icon_size_small"
+            android:contentDescription="@string/search_icon"
+            android:src="@drawable/ic_search" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_small"
+            android:layout_weight="1"
+            android:text="@string/search_hint"
+            android:textColor="@color/dark_text" />
+
+    </LinearLayout>
+
+
+    <GridLayout
+        android:id="@+id/services_grid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:background="@color/white"
+        android:columnCount="4"
+        android:padding="@dimen/padding_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar">
+
+        <!-- Dịch vụ 1: Xe hơi -->
+        <TextView
+            style="@style/ServiceIcon"
+            android:drawableTop="@drawable/ic_car"
+            android:text="@string/service_car" />
+        <!-- Dịch vụ 2: Xe máy -->
+        <TextView
+            style="@style/ServiceIcon"
+            android:drawableTop="@drawable/ic_bike"
+            android:text="@string/service_bike" />
+        <!-- Dịch vụ 3: Đồ ăn -->
+        <TextView
+            style="@style/ServiceIcon"
+            android:drawableTop="@drawable/ic_food"
+            android:text="@string/service_food" />
+        <!-- Dịch vụ 4: Giao hàng -->
+        <TextView
+            style="@style/ServiceIcon"
+            android:drawableTop="@drawable/ic_delivery"
+            android:text="@string/service_delivery" />
+    </GridLayout>
+
+    <!-- Khu vực quảng cáo -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ad_card"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_margin="@dimen/padding_normal"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/services_grid">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/ad_placeholder"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_ad" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Thanh điều hướng dưới cùng -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

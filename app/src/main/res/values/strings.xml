@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Grab </string>
+
+    <!-- Search Bar -->
+    <string name="search_hint">Bạn đang tìm gì?</string>
+    <string name="search_icon">Biểu tượng tìm kiếm</string>
+
+    <!-- Services -->
+    <string name="service_car">Xe hơi</string>
+    <string name="service_bike">Xe máy</string>
+    <string name="service_food">Đồ ăn</string>
+    <string name="service_delivery">Giao hàng</string>
+
+    <!-- Ad -->
+    <string name="ad_placeholder">Ảnh quảng cáo</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_activity">Hoạt động</string>
+    <string name="nav_payment">Thanh toán</string>
+    <string name="nav_account">Tài khoản</string>
+</resources>
