@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Grab </string>
+    <string name="app_name">Xe giá tốt </string>
 
     <!-- Search Bar -->
     <string name="search_hint">Bạn đang tìm gì?</string>
@@ -8,15 +8,14 @@
     <!-- Services -->
     <string name="service_car">Xe hơi</string>
     <string name="service_bike">Xe máy</string>
-    <string name="service_food">Đồ ăn</string>
-    <string name="service_delivery">Giao hàng</string>
+    <string name="service_orders">Đơn hàng</string>
 
     <!-- Ad -->
     <string name="ad_placeholder">Ảnh quảng cáo</string>
 
     <!-- Bottom Navigation -->
     <string name="nav_home">Trang chủ</string>
-    <string name="nav_activity">Hoạt động</string>
-    <string name="nav_payment">Thanh toán</string>
-    <string name="nav_account">Tài khoản</string>
+
+    <string name="nav_logout">Đăng xuất</string>
+    <string name="title_activity_cart">CartActivity</string>
 </resources>

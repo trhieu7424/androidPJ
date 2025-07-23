@@ -51,9 +51,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Giá tiền"
-                android:textColor="@color/gray"
+                android:textColor="@color/grab_green"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnAddToCart"
+                style="@style/AddToCartButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Thêm vào giỏ" />
+
         </LinearLayout>
+
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

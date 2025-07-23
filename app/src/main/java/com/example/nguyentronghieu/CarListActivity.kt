@@ -1,26 +1,44 @@
 package com.example.nguyentronghieu
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class CarListActivity : AppCompatActivity() {
+
+    private lateinit var carAdapter: CarAdapter
+    private val carList = mutableListOf<Car>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_car_list)
 
         val rvCars = findViewById<RecyclerView>(R.id.rvCars)
 
-        val carList = listOf(
-            Car("Vinfast VF8", "Xe điện thông minh, công nghệ vượt trội", "1.2 tỷ", R.drawable.car_vinfast_vf8),
-            Car("Toyota Vios", "Bền bỉ, tiết kiệm nhiên liệu", "592 triệu", R.drawable.car_toyota_vios),
+        carAdapter = CarAdapter(carList)
+        rvCars.adapter = carAdapter
 
-            Car("Hyundai Accent", "Thiết kế trẻ trung, nhiều tiện nghi", "542 triệu", R.drawable.car_huyndai_accent),
+        fetchCarsFromFirestore()
+    }
 
-            Car("Ford Ranger", "Vua bán tải, mạnh mẽ và đa dụng", "965 triệu", R.drawable.car_ford_ranger)
-        )
+    private fun fetchCarsFromFirestore() {
+        val db = Firebase.firestore
+        db.collection("cars")
+            .get()
+            .addOnSuccessListener { documents ->
+                carList.clear()
+                for (document in documents) {
 
-        val adapter = CarAdapter(carList)
-        rvCars.adapter = adapter
+                    val car = document.toObject(Car::class.java)
+                    carList.add(car)
+                }
+                carAdapter.notifyDataSetChanged()
+            }
+            .addOnFailureListener { exception ->
+                Toast.makeText(this, "Lỗi tải dữ liệu: ${exception.message}", Toast.LENGTH_LONG).show()
+            }
     }
 }

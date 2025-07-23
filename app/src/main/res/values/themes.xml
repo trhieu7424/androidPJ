@@ -26,4 +26,12 @@
         <item name="android:textColor">@color/dark_text</item>
     </style>
 
+    <style name="AddToCartButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="strokeColor">@color/purple_500</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="rippleColor">@color/purple_200</item>
+    </style>
+
 </resources>

@@ -14,35 +14,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NguyenTrongHieu"
         tools:targetApi="31">
-
-        <!-- Activity chính -->
         <activity
-            android:name=".MainActivity"
+            android:name=".SearchActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Các Activity phụ -->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
         <activity
             android:name=".CarListActivity"
             android:label="Danh sách xe hơi" />
-
-        <activity
-            android:name=".FoodActivity"
-            android:label="Đặt đồ ăn" />
-
-        <activity
-            android:name=".ServiceDetailActivity"
-            android:label="Chi tiết dịch vụ" />
-
-        <!-- KHAI BÁO MotorbikeListActivity MỘT LẦN DUY NHẤT -->
         <activity
             android:name=".MotorbikeListActivity"
             android:label="Danh sách xe máy" />
-
+        <activity
+            android:name=".ServiceDetailActivity"
+            android:label="Chi tiết dịch vụ" />
+        <activity
+            android:name=".CartActivity"
+            android:label="Giỏ hàng của bạn" />
+        <activity
+            android:name=".ProductDetailActivity"
+            android:label="Chi tiết sản phẩm" />
     </application>
 
 </manifest>

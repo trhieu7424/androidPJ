@@ -1,4 +1,3 @@
-
 package com.example.nguyentronghieu
 
 import androidx.appcompat.app.AppCompatActivity

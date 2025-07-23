@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "488996889205",
+    "project_id": "tronghieumobile-fc35a",
+    "storage_bucket": "tronghieumobile-fc35a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488996889205:android:7b6692699cdd6994080e3c",
+        "android_client_info": {
+          "package_name": "com.example.nguyentronghieu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtgbcE20h8JkPk3qQSnav38eYp1AtNj2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

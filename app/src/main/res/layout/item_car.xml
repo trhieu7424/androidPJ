@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginVertical="8dp"
-    app:cardCornerRadius="12dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="8dp"
     app:cardElevation="4dp">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
 
         <ImageView
-            android:id="@+id/imgCar"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:id="@+id/ivCarImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:scaleType="centerCrop"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/car_vinfast_vf8" />
+            android:src="@drawable/ic_car" />
 
-        <TextView
-            android:id="@+id/tvCarName"
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="8dp"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@id/tvCarPrice"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgCar"
-            tools:text="Vinfast VF8" />
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvCarDescription"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/tvCarName"
-            app:layout_constraintStart_toStartOf="@id/tvCarName"
-            app:layout_constraintTop_toBottomOf="@id/tvCarName"
-            tools:text="Xe điện thông minh" />
+            <TextView
+                android:id="@+id/tvCarName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên xe hơi"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvCarPrice"
+            <TextView
+                android:id="@+id/tvCarDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Mô tả ngắn về xe"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvCarPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Giá tiền"
+                android:textColor="@color/purple_700"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnAddToCart"
+                style="@style/AddToCartButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:textColor="@color/dark_text"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@id/tvCarDescription"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tvCarName"
-            tools:text="1.2 tỷ" />
+            android:layout_marginTop="8dp"
+            android:text="Thêm vào giỏ" />
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        </LinearLayout>
+    </LinearLayout>
 </androidx.cardview.widget.CardView>
